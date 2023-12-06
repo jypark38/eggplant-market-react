@@ -19,7 +19,6 @@ export default function Home() {
     <>
       <Meta title="피드" />
       <Header page="main" text="가지마켓 피드" />
-      <div>홈</div>
       {isLoading ? <SkeletonHome /> : posts.length ? <HomeWithPost posts={posts} /> : <HomeWithoutPost />}
       <Footer />
     </>
