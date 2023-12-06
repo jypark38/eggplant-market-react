@@ -46,3 +46,6 @@ jobs:
             --recursive \
             --region ap-northeast-2 \
             ./build s3://${{env.S3_BUCKET_NAME}}
+
+      - name: Invalidate CloudFront Cache 
+        run: aws cloudfront create-invalidation --distribution-id E3KTRI1QCMF0FV --paths "/*"
